@@ -2,6 +2,7 @@ package com.thales.model;
 
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
@@ -28,9 +29,11 @@ public class Course {
     private String color;
 
     @ManyToMany(mappedBy = "excludedCourses")
+    @JsonIgnore
     private List<ClassRoom> excludedClassRooms=new ArrayList<>();
 
     @ManyToMany(mappedBy = "courses")
+    @JsonIgnore
     List<Teacher> teachers =new ArrayList<>();
 
     @ManyToOne

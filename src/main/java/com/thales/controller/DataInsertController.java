@@ -101,11 +101,31 @@ public class DataInsertController {
         course3.setSchool(school1);
         course4.setSchool(school1);
         course5.setSchool(school1);
+        course71.setSchool(school1);
+        course8.setSchool(school1);
 
         course11.setSchool(school2);
         course21.setSchool(school2);
         course31.setSchool(school2);
         course7.setSchool(school2);
+        course6.setSchool(school2);
+        course9.setSchool(school2);
+        course10.setSchool(school2);
+
+        this.courseDao.save(course1);
+        this.courseDao.save(course11);
+        this.courseDao.save(course2);
+        this.courseDao.save(course21);
+        this.courseDao.save(course3);
+        this.courseDao.save(course31);
+        this.courseDao.save(course4);
+        this.courseDao.save(course5);
+        this.courseDao.save(course6);
+        this.courseDao.save(course7);
+        this.courseDao.save(course71);
+        this.courseDao.save(course8);
+        this.courseDao.save(course9);
+        this.courseDao.save(course10);
 
 
     }

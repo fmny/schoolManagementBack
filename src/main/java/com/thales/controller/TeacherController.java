@@ -10,6 +10,7 @@ import java.util.List;
 
 @RestController()
 @RequestMapping("/teachers")
+@CrossOrigin(origins = "http://localhost:4200")
 public class TeacherController {
     @Autowired
     private TeacherDao teacherDao;
@@ -19,6 +20,10 @@ public class TeacherController {
       return this.teacherDao.findAll();
     }
 
+    @GetMapping({"count/{id}/", "count/{id}"})
+    public long contBySchool(@PathVariable Integer id){
+        return this.teacherDao.countBySchool_id(id);
+    }
 
     @GetMapping({"{id}/", "{id}"})
     public Teacher findOne(@PathVariable int id) {

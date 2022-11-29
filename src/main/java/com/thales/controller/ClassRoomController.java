@@ -10,6 +10,7 @@ import java.util.List;
 
 @RestController()
 @RequestMapping("/classrooms")
+@CrossOrigin(origins = "http://localhost:4200")
 public class ClassRoomController {
     @Autowired
     private ClassRoomDao classRoomDao;
@@ -19,6 +20,10 @@ public class ClassRoomController {
       return this.classRoomDao.findAll();
     }
 
+    @GetMapping({"count/{id}/", "count/{id}"})
+    public long contBySchool(@PathVariable Integer id){
+        return this.classRoomDao.countBySchool_id(id);
+    }
 
     @GetMapping({"{id}/", "{id}"})
     public ClassRoom findOne(@PathVariable int id) {

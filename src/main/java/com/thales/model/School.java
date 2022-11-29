@@ -3,6 +3,7 @@ package com.thales.model;
 
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
@@ -37,15 +38,19 @@ public class School {
 	private Address address;
 
 	@OneToMany(mappedBy = "school")
+	@JsonIgnore
 	private List<ClassRoom> classRooms=new ArrayList<>();
 
 	@OneToMany(mappedBy = "school")
+	@JsonIgnore
 	List<Teacher> teachers=new ArrayList<>();
 
 	@OneToMany(mappedBy = "school")
+	@JsonIgnore
 	List<Grade> grades=new ArrayList<>();
 
 	@OneToMany(mappedBy = "school")
+	@JsonIgnore
 	List<Course> courses=new ArrayList<>();
 
 

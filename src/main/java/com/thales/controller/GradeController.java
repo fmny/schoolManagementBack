@@ -10,6 +10,7 @@ import java.util.List;
 
 @RestController()
 @RequestMapping("/grades")
+@CrossOrigin(origins = "http://localhost:4200")
 public class GradeController {
     @Autowired
     private GradeDao gradeDao;
@@ -17,6 +18,11 @@ public class GradeController {
     @GetMapping({"/", ""})
     public List<Grade> getAll(){
       return this.gradeDao.findAll();
+    }
+
+    @GetMapping({"count/{id}/", "count/{id}"})
+    public long contBySchool(@PathVariable Integer id){
+        return this.gradeDao.countBySchool_id(id);
     }
 
 
