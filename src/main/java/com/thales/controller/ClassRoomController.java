@@ -10,6 +10,7 @@ import java.util.List;
 
 @RestController()
 @RequestMapping("/classrooms")
+@CrossOrigin(origins = "http://localhost:4200")
 public class ClassRoomController {
     @Autowired
     private ClassRoomDao classRoomDao;

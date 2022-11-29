@@ -2,6 +2,7 @@ package com.thales.model;
 
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
@@ -32,6 +33,7 @@ public class Teacher {
     private Date birthdate;
 
     @OneToOne(mappedBy = "teacher")
+    @JsonIgnore
     private Grade grade;
 
     @OneToMany(mappedBy="teacher")
