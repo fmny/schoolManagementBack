@@ -24,17 +24,18 @@ public class Grade {
     private int id;
 
     @NonNull
-    private String name;
+    private String section;
 
     @NonNull
-    private String section;
+    private String name;
+
 
     @OneToMany(mappedBy = "grade")
     @JsonIgnore
     private List<Lesson> lessons=new ArrayList<>();
 
     @OneToOne
-    private Teacher teacher;
+    private Teacher mainTeacher;
 
     @ManyToOne
     School school;

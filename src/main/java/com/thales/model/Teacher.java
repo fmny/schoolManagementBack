@@ -32,7 +32,7 @@ public class Teacher {
     @Temporal(TemporalType.DATE)
     private Date birthdate;
 
-    @OneToOne(mappedBy = "teacher")
+    @OneToOne(mappedBy = "mainTeacher")
     @JsonIgnore
     private Grade grade;
 
