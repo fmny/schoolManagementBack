@@ -20,6 +20,11 @@ public class GradeController {
       return this.gradeDao.findAll();
     }
 
+    @GetMapping({"count/{id}/", "count/{id}"})
+    public long contBySchool(@PathVariable Integer id){
+        return this.gradeDao.countBySchool_id(id);
+    }
+
 
     @GetMapping({"{id}/", "{id}"})
     public Grade findOne(@PathVariable int id) {

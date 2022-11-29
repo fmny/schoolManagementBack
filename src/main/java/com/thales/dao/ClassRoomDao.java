@@ -8,4 +8,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ClassRoomDao extends JpaRepository<ClassRoom, Integer> {
 
+    public long countBySchool_id(Integer schoolId);
+
 }

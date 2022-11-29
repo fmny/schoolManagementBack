@@ -7,5 +7,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface GradeDao extends JpaRepository<Grade, Integer> {
 
+    public long countBySchool_id(Integer schoolId);
 
 }

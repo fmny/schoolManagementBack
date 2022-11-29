@@ -20,6 +20,11 @@ public class TeacherController {
       return this.teacherDao.findAll();
     }
 
+    @GetMapping({"count/{id}/", "count/{id}"})
+    public long contBySchool(@PathVariable Integer id){
+        return this.teacherDao.countBySchool_id(id);
+    }
+
     @GetMapping({"{id}/", "{id}"})
     public Teacher findOne(@PathVariable int id) {
         return this.teacherDao.findById(id).get();
