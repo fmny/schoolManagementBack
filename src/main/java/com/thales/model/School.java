@@ -54,5 +54,4 @@ public class School {
 	List<Course> courses=new ArrayList<>();
 
 
-
 }

@@ -21,7 +21,7 @@ public class CourseController {
     }
 
     @GetMapping({"count/{id}/", "count/{id}"})
-    public long contBySchool(@PathVariable Integer id){
+    public long countBySchool(@PathVariable Integer id){
         return this.courseDao.countBySchool_id(id);
     }
 

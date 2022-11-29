@@ -2,10 +2,7 @@ package com.thales.controller;
 
 
 import com.thales.dao.*;
-import com.thales.model.Address;
-import com.thales.model.ClassRoom;
-import com.thales.model.Course;
-import com.thales.model.School;
+import com.thales.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -126,6 +123,48 @@ public class DataInsertController {
         this.courseDao.save(course8);
         this.courseDao.save(course9);
         this.courseDao.save(course10);
+
+        Teacher teacher1=new Teacher("prof1","LeProf");
+        Teacher teacher11=new Teacher("prof11","LeProf");
+        Teacher teacher2=new Teacher("prof2","LeProf");
+        Teacher teacher21=new Teacher("prof21","LeProf");
+        Teacher teacher3=new Teacher("prof3","LeProf");
+        Teacher teacher31=new Teacher("prof3","LeProf");
+        Teacher teacher4=new Teacher("prof4","LeProf");
+        Teacher teacher5=new Teacher("prof5","LeProf");
+        Teacher teacher6=new Teacher("prof6","LeProf");
+        Teacher teacher7=new Teacher("prof7","LeProf");
+        Teacher teacher71=new Teacher("prof71","LeProf");
+        Teacher teacher8=new Teacher("prof8","LeProf");
+        Teacher teacher9=new Teacher("prof9","LeProf");
+        Teacher teacher10=new Teacher("prof10","LeProf");
+
+        teacher1.setBirthdate("23","5","2000");
+
+
+        this.teacherDao.save(teacher1);
+        this.teacherDao.save(teacher2);
+        this.teacherDao.save(teacher21);
+        this.teacherDao.save(teacher3);
+        this.teacherDao.save(teacher31);
+        this.teacherDao.save(teacher4);
+        this.teacherDao.save(teacher5);
+        this.teacherDao.save(teacher6);
+        this.teacherDao.save(teacher7);
+        this.teacherDao.save(teacher71);
+        this.teacherDao.save(teacher8);
+        this.teacherDao.save(teacher9);
+        this.teacherDao.save(teacher10);
+
+        teacher1.setSchool(school1);
+        schoolDao.save(school1);
+        /*course2.setSchool(school1);
+        course3.setSchool(school1);
+        course4.setSchool(school1);
+        course5.setSchool(school1);
+        course71.setSchool(school1);
+        course8.setSchool(school1);*/
+
 
 
     }
