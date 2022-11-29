@@ -3,6 +3,7 @@ package com.thales.controller;
 
 import com.thales.dao.ClassRoomDao;
 import com.thales.model.ClassRoom;
+import com.thales.model.Course;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -23,6 +24,11 @@ public class ClassRoomController {
     @GetMapping({"count/{id}/", "count/{id}"})
     public long contBySchool(@PathVariable Integer id){
         return this.classRoomDao.countBySchool_id(id);
+    }
+
+    @GetMapping({"find/{id}/", "find/{id}"})
+    public List<ClassRoom> findBySchool(@PathVariable Integer id){
+        return this.classRoomDao.findBySchool_id(id);
     }
 
     @GetMapping({"{id}/", "{id}"})

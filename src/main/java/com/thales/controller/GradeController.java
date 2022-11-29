@@ -2,6 +2,7 @@ package com.thales.controller;
 
 
 import com.thales.dao.GradeDao;
+import com.thales.model.Course;
 import com.thales.model.Grade;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -25,6 +26,10 @@ public class GradeController {
         return this.gradeDao.countBySchool_id(id);
     }
 
+    @GetMapping({"find/{id}/", "find/{id}"})
+    public List<Grade> findBySchool(@PathVariable Integer id){
+        return this.gradeDao.findBySchool_id(id);
+    }
 
     @GetMapping({"{id}/", "{id}"})
     public Grade findOne(@PathVariable int id) {

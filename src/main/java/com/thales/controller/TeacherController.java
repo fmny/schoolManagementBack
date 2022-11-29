@@ -2,6 +2,7 @@ package com.thales.controller;
 
 
 import com.thales.dao.TeacherDao;
+import com.thales.model.Course;
 import com.thales.model.Teacher;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -23,6 +24,11 @@ public class TeacherController {
     @GetMapping({"count/{id}/", "count/{id}"})
     public long contBySchool(@PathVariable Integer id){
         return this.teacherDao.countBySchool_id(id);
+    }
+
+    @GetMapping({"find/{id}/", "find/{id}"})
+    public List<Teacher> findBySchool(@PathVariable Integer id){
+        return this.teacherDao.findBySchool_id(id);
     }
 
     @GetMapping({"{id}/", "{id}"})
