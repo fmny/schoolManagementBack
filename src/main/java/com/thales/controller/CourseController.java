@@ -25,6 +25,11 @@ public class CourseController {
         return this.courseDao.countBySchool_id(id);
     }
 
+    @GetMapping({"find/{id}/", "find/{id}"})
+    public List<Course> findBySchool(@PathVariable Integer id){
+        return this.courseDao.findBySchool_id(id);
+    }
+
     @GetMapping({"{id}/", "{id}"})
     public Course findOne(@PathVariable int id) {
         return this.courseDao.findById(id).get();
