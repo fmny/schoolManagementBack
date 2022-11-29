@@ -31,10 +31,22 @@ public class UserController {
         this.userDao.save(user);
     }
 
-
     @DeleteMapping({"{id}/", "{id}"})
     public void deleteUser(@PathVariable int id) {
         this.userDao.deleteById(id);
     }
+
+    @PostMapping({"connect/", "connect"})
+    public User tryConnect(@RequestBody User user) {
+
+        User tryToConnect = this.userDao.findByLogin(user.getLogin());
+
+        if (tryToConnect != null && !tryToConnect.getPassword().equals(user.getPassword()) ){
+            tryToConnect = null;
+        }
+
+        return tryToConnect;
+    }
+
 
 }
