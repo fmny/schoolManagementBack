@@ -29,12 +29,11 @@ public class Grade {
     @NonNull
     private String name;
 
-
     @OneToMany(mappedBy = "grade")
     @JsonIgnore
     private List<Lesson> lessons=new ArrayList<>();
 
-    @OneToOne
+    @ManyToOne
     private Teacher mainTeacher;
 
     @ManyToOne

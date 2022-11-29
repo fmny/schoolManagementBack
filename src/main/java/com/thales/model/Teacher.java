@@ -32,9 +32,9 @@ public class Teacher {
     @Temporal(TemporalType.DATE)
     private Date birthdate;
 
-    @OneToOne(mappedBy = "mainTeacher")
+    @OneToMany(mappedBy = "mainTeacher")
     @JsonIgnore
-    private Grade grade;
+    private List<Grade> grades;
 
     @OneToMany(mappedBy="teacher")
     List<Lesson> lessons=new ArrayList<>();
