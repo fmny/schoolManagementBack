@@ -108,15 +108,6 @@ public class DataInsertController {
         course7.setSchool(school2);
 
 
-
-
-
-
-
-
-
-
-
     }
 
 
