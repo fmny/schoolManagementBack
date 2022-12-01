@@ -25,7 +25,7 @@ public class ClassRoom {
     private String name;
 
     @NonNull
-    private int Capacity;
+    private int capacity;
 
     @ManyToOne
     private School school;

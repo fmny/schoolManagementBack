@@ -22,12 +22,12 @@ public class Lesson {
 
 	@NonNull
 	@Column(name = "hourstart")
-	@Temporal(TemporalType.DATE)
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date startHour;
 
 	@NonNull
 	@Column(name = "hourend")
-	@Temporal(TemporalType.DATE)
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date endHour;
 
 	@ManyToOne
