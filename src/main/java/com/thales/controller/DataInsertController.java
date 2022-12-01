@@ -145,9 +145,9 @@ public class DataInsertController {
         Teacher profPhilo=new Teacher("Sophia","Sanchez","10/12/2002");
         Teacher profAllemand=new Teacher("Logan","Moulin","17/11/2001");
         Teacher profLatin=new Teacher("Mia","Leroy","07/04/1995");
-        Teacher teacher8=new Teacher("Jacob","Boucher","30/12/1998");
-        Teacher teacher9=new Teacher("Charlie","Bonnet","25/01/1968");
-        Teacher teacher10=new Teacher("Nathan","Fleury","23/08/1995");
+        Teacher profMath2=new Teacher("Jacob","Boucher","30/12/1998");
+        Teacher profFrancais2=new Teacher("Charlie","Bonnet","25/01/1968");
+        Teacher profLatin2=new Teacher("Nathan","Fleury","23/08/1995");
 
         /*
         profMath.setBirthdate(new Date(72, 6, 8, 12, 0, 0));
@@ -174,9 +174,9 @@ public class DataInsertController {
         profPhilo.setSchool(Lycee1);
         profAllemand.setSchool(Lycee1);
 
-        teacher8.setSchool(college1);
-        teacher9.setSchool(college1);
-        teacher10.setSchool(college1);
+        profFrancais2.setSchool(college1);
+        profLatin2.setSchool(college1);
+        profMath2.setSchool(college1);
         profMath1.setSchool(college1);
         profChimie.setSchool(college1);
         profEPS.setSchool(college1);
@@ -196,6 +196,11 @@ public class DataInsertController {
         profPhilo.getCourses().add(coursPhilo);
         profAllemand.getCourses().add(coursAllemand);
         profLatin.getCourses().add(coursLatin);
+        profFrancais2.getCourses().add(coursFrancais1);
+        profMath2.getCourses().add(coursMath2);
+        profLatin2.getCourses().add(coursLatin);
+
+
 
 
         this.teacherDao.save(profMath);
@@ -209,9 +214,9 @@ public class DataInsertController {
         this.teacherDao.save(profPhilo);
         this.teacherDao.save(profAllemand);
         this.teacherDao.save(profLatin);
-        this.teacherDao.save(teacher8);
-        this.teacherDao.save(teacher9);
-        this.teacherDao.save(teacher10);
+        this.teacherDao.save(profFrancais2);
+        this.teacherDao.save(profMath2);
+        this.teacherDao.save(profLatin2);
 
         Grade gradeTermA=new Grade("Term.","A");
         Grade gradeTermB=new Grade("Term.","B");
@@ -271,16 +276,16 @@ public class DataInsertController {
         grade3emeB.setSchool(college1);
         grade3emeC.setSchool(college1);
 
-        grade6emeA.setMainTeacher(teacher8);
-        grade6emeB.setMainTeacher(teacher9);
-        grade6emeC.setMainTeacher(teacher10);
+        grade6emeA.setMainTeacher(profMath2);
+        grade6emeB.setMainTeacher(profFrancais2);
+        grade6emeC.setMainTeacher(profLatin2);
         grade5emeA.setMainTeacher(profMath1);
         grade5emeB.setMainTeacher(profChimie);
         grade5emeC.setMainTeacher(profEPS);
         grade4emeA.setMainTeacher(profLatin);
-        grade4emeB.setMainTeacher(teacher8);
-        grade4emeC.setMainTeacher(teacher9);
-        grade3emeA.setMainTeacher(teacher10);
+        grade4emeB.setMainTeacher(profMath2);
+        grade4emeC.setMainTeacher(profFrancais2);
+        grade3emeA.setMainTeacher(profLatin2);
         grade3emeB.setMainTeacher(profMath1);
         grade3emeC.setMainTeacher(profChimie);
 
