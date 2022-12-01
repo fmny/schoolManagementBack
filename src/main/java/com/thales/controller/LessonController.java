@@ -33,8 +33,9 @@ public class LessonController {
     }
 
     @PostMapping({"/", ""})
-    public void addLesson(@RequestBody Lesson lesson) {
+    public Lesson addLesson(@RequestBody Lesson lesson) {
         this.lessonDao.save(lesson);
+        return lesson;
     }
 
 
