@@ -3,6 +3,7 @@ package com.thales.controller;
 
 import com.thales.dao.LessonDao;
 import com.thales.model.Lesson;
+import com.thales.model.Teacher;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -26,6 +27,10 @@ public class LessonController {
         return this.lessonDao.findById(id).get();
     }
 
+    @GetMapping({"findbygrade/{id}/", "findbygrade/{id}"})
+    public List<Lesson> findByGrade(@PathVariable Integer id){
+        return this.lessonDao.findByGrade_id(id);
+    }
 
     @PostMapping({"/", ""})
     public void addLesson(@RequestBody Lesson lesson) {

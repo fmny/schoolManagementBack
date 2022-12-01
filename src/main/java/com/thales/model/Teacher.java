@@ -37,6 +37,7 @@ public class Teacher {
     private List<Grade> grades;
 
     @OneToMany(mappedBy="teacher")
+    @JsonIgnore
     List<Lesson> lessons=new ArrayList<>();
 
     @ManyToMany
