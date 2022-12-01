@@ -38,4 +38,7 @@ public class Lesson {
 
 	@ManyToOne
 	private Teacher teacher;
+
+	@ManyToOne
+	private ClassRoom classRoom;
 }
