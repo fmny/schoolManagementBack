@@ -28,9 +28,14 @@ public class Teacher {
     @NonNull
     private String lastName;
 
+    /*
     @Column(name = "birthdate")
     @Temporal(TemporalType.DATE)
-    private Date birthdate;
+    private Date birthdate;*/
+
+    @NonNull
+    private String birthdate;
+
 
     @OneToMany(mappedBy = "mainTeacher")
     @JsonIgnore

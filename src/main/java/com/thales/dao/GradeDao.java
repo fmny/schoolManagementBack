@@ -15,9 +15,5 @@ public interface GradeDao extends JpaRepository<Grade, Integer> {
 
     public List<Grade> findBySchool_id(Integer schoolId);
 
-    //TODO ajouter méthode qui sauvegarde une grade avec un teacher (celui de la comboBox)
-    //public Teacher findByGrade_id(Integer gradeId );
-    //public Teacher findByGrade(Teacher teacher );
-
 
 }

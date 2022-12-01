@@ -39,13 +39,13 @@ public class DataInsertController {
 
     final public void getList() {
 
-        Address address1=new Address("Nantes","rue des 4",1,"France");
-        Address address2=new Address("Nantes","rue des 5",1,"France");
+        Address address1=new Address("Nantes","rue de Paris",12,"France");
+        Address address2=new Address("Grenoble","rue du Général de Gaulle",27,"France");
         addressDao.save(address1);
         addressDao.save(address2);
 
-        School Lycee1=new School("etablissement1","Lycée","012345678","logo1");
-        School college1=new School("etablissement2","Collège","012345678","logo2");
+        School Lycee1=new School("Lycée de La Colinière","Lycée","022545978","logo1");
+        School college1=new School("Collège Claude Debussy","Collège","0123510290","logo2");
 
         Lycee1.setAddress(address1);
         college1.setAddress(address2);
@@ -134,21 +134,22 @@ public class DataInsertController {
         classRoomDao.save(classRoom6);
         classRoomDao.save(classRoom7);
 
-        Teacher profMath=new Teacher("Emma","Martin");
-        Teacher profMath1=new Teacher("Liam","Bernard");
-        Teacher profPhys=new Teacher("Olivia","Lopez");
-        Teacher profChimie=new Teacher("Noah","Dupuy");
-        Teacher profBiologie=new Teacher("Alice","Guillot");
-        Teacher profEPS=new Teacher("William","Berger");
-        Teacher profAnglais=new Teacher("Léa","Hubert");
-        Teacher profFrancais=new Teacher("Thomas","Carpentier");
-        Teacher profPhilo=new Teacher("Sophia","Sanchez");
-        Teacher profAllemand=new Teacher("Logan","Moulin");
-        Teacher profLatin=new Teacher("Mia","Leroy");
-        Teacher teacher8=new Teacher("Jacob","Boucher");
-        Teacher teacher9=new Teacher("Charlie","Bonnet");
-        Teacher teacher10=new Teacher("Nathan","Fleury");
+        Teacher profMath=new Teacher("Emma","Martin","08/06/1972");
+        Teacher profMath1=new Teacher("Liam","Bernard","15/01/1983");
+        Teacher profPhys=new Teacher("Olivia","Lopez","23/08/2002");
+        Teacher profChimie=new Teacher("Noah","Dupuy","13/12/1969");
+        Teacher profBiologie=new Teacher("Alice","Guillot","27/03/2000");
+        Teacher profEPS=new Teacher("William","Berger","21/02/1992");
+        Teacher profAnglais=new Teacher("Léa","Hubert","03/08/1958");
+        Teacher profFrancais=new Teacher("Thomas","Carpentier","01/10/1945");
+        Teacher profPhilo=new Teacher("Sophia","Sanchez","10/12/2002");
+        Teacher profAllemand=new Teacher("Logan","Moulin","17/11/2001");
+        Teacher profLatin=new Teacher("Mia","Leroy","07/04/1995");
+        Teacher teacher8=new Teacher("Jacob","Boucher","30/12/1998");
+        Teacher teacher9=new Teacher("Charlie","Bonnet","25/01/1968");
+        Teacher teacher10=new Teacher("Nathan","Fleury","23/08/1995");
 
+        /*
         profMath.setBirthdate(new Date(72, 6, 8, 12, 0, 0));
         profMath1.setBirthdate(new Date(83, 1, 15, 12, 0, 0));
         profPhys.setBirthdate(new Date(102, 7, 23, 12, 0, 0));
@@ -162,7 +163,8 @@ public class DataInsertController {
         profLatin.setBirthdate(new Date(98, 11, 30, 12, 0, 0));
         teacher8.setBirthdate(new Date(67, 12, 25, 12, 0, 0));
         teacher9.setBirthdate(new Date(88, 6, 19, 12, 0, 0));
-        teacher10.setBirthdate(new Date(95, 7, 23, 12, 0, 0));
+        teacher10.setBirthdate(new Date(95, 7, 23, 12, 0, 0));*/
+
 
         profMath.setSchool(Lycee1);
         profPhys.setSchool(Lycee1);
@@ -305,10 +307,10 @@ public class DataInsertController {
         this.gradeDao.save(grade3emeB);
         this.gradeDao.save(grade3emeC);
 
-        User user1=new User("celine","");
-        User user2=new User("login2","password2");
-        User user3=new User("login3","password3");
-        User user4=new User("login4","password4");
+        User user1=new User("test","test");
+        User user2=new User("log1","mdp1");
+        User user3=new User("log2","mdp2");
+        User user4=new User("log3","mdp3");
 
         this.userDao.save(user1);
         this.userDao.save(user2);
