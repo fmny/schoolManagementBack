@@ -305,7 +305,7 @@ public class DataInsertController {
         this.gradeDao.save(grade3emeB);
         this.gradeDao.save(grade3emeC);
 
-        User user1=new User("","");
+        User user1=new User("celine","");
         User user2=new User("login2","password2");
         User user3=new User("login3","password3");
         User user4=new User("login4","password4");
