@@ -3,6 +3,7 @@ package com.thales.dao;
 
 import com.thales.model.ClassRoom;
 import com.thales.model.Grade;
+import com.thales.model.School;
 import com.thales.model.Teacher;
 import org.springframework.data.jpa.repository.JpaRepository;
 
@@ -14,6 +15,4 @@ public interface GradeDao extends JpaRepository<Grade, Integer> {
     public long countBySchool_id(Integer schoolId);
 
     public List<Grade> findBySchool_id(Integer schoolId);
-
-
 }

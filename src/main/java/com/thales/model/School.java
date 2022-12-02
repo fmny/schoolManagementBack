@@ -8,6 +8,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
+import org.hibernate.annotations.Cascade;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,6 +36,7 @@ public class School {
 	private String logo;
 
 	@OneToOne
+	@Cascade(org.hibernate.annotations.CascadeType.PERSIST)
 	private Address address;
 
 	@OneToMany(mappedBy = "school")
